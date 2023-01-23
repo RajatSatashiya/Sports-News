@@ -1,0 +1,100 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-portion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #dbdbac;
+  color: black;
+  padding: 1.5rem 6rem;
+}
+
+.nav-portion h3,
+.project-title {
+  color: black;
+  font-family: "Montserrat";
+  font-size: 2rem;
+  font-weight: 900;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  list-style-type: none;
+}
+.nav-list li {
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+/* .nav-list li:hover {
+  color: #d7b6b8;
+} */
+/* .nav-list li:last-child {
+  font-weight: 400;
+  color: #fafafa;
+  background: #2f1f1f;
+  border-radius: 12px;
+  padding: 0.7rem;
+} */
+
+.profile-icon {
+  background: black;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 100%;
+  font-size: 0.7rem;
+}
+
+.sidebar-container {
+  position: absolute;
+  background: #fafafa;
+  box-shadow: 0 0 25px -10px black;
+  border-radius: 5px;
+  font-family: Montserrat;
+  width: 20%;
+  z-index: 2;
+  left: calc(80% - 5rem);
+}
+
+.profile-hover li {
+  padding: 20px;
+}
+
+.profile-hover li:hover {
+  background: #eceff1;
+}
+.llb-class {
+  color: black;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 13px;
+  }
+  .nav2 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 13px;
+  }
+  nav {
+    padding: 1rem 1rem;
+  }
+  .nav-list {
+    justify-content: center;
+  }
+  .nav-list li {
+    margin: 0 0.4rem;
+  }
+}

@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0 0 2rem;
+}
+.title {
+  font-family: Roboto;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.leagueLogo {
+  width: 7rem;
+}
+
+.seasons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.panel {
+  font-size: 1.1rem;
+  background: #689775;
+  margin: 0.7rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 5px grey;
+  text-align: center;
+}
+
+.links {
+  color: #eceff1;
+}

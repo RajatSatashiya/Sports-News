@@ -1,0 +1,42 @@
+footer {
+  background: #1a202c;
+  margin-top: 4rem;
+  padding: 2rem;
+  color: #fafafa;
+  font-family: Montserrat;
+}
+.footer-desc {
+  margin: 4rem 4rem;
+}
+.footer-title {
+  color: #fafafa;
+}
+.crucial-links {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid white;
+  font-weight: 200;
+}
+.crucial-links h4:first-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.crucial-links ul li {
+  color: white;
+}
+.crucial-links li {
+  cursor: pointer;
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+}
+.bottom-desc {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-desc i {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
