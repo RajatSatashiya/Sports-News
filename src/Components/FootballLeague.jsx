@@ -27,7 +27,6 @@ function FootballLeague() {
       );
       const data = await response.json();
       setSeason(data.data.seasons);
-      console.log(data.data.seasons);
     } catch (e) {
       console.log("Error: " + e);
     }
