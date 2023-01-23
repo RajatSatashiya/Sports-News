@@ -88,9 +88,6 @@ nav {
   html {
     font-size: 13px;
   }
-  nav {
-    padding: 1rem 1rem;
-  }
   .nav-list {
     justify-content: center;
   }
