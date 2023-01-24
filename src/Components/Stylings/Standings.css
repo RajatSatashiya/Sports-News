@@ -1,3 +1,43 @@
 table {
   text-align: center;
+  font-family: Montserrat;
+  font-weight: 500;
+  margin-left: 0.3rem;
+  margin-top: 1rem;
+}
+
+.teamTitle,
+.club {
+  display: flex;
+  justify-content: left;
+  margin-left: 1rem;
+}
+
+.standingsLogo {
+  width: 1.3rem;
+  margin-right: 0.4rem;
+}
+
+.qualification {
+  margin: 1rem;
+  font-family: Montserrat;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.championsleague {
+  border-left: 18px solid #65ac88;
+  padding-left: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.europa {
+  border-left: 18px solid #b2bfd0;
+  padding-left: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.relegation {
+  border-left: 18px solid #ff7f84;
+  padding-left: 0.4rem;
+  margin-top: 0.2rem;
 }

@@ -7,6 +7,7 @@ function Standings() {
   const id = searchParams.get("id");
   const season = searchParams.get("season");
   const [standings, setStandings] = useState([]);
+  const [isNote, setIsNote] = useState(false);
 
   const getStandings = async () => {
     try {
@@ -15,16 +16,33 @@ function Standings() {
       );
       const data = await response.json();
       setStandings(data.data.standings);
+      if ("note" in data.data.standings[0]) {
+        setIsNote(true);
+      }
     } catch (e) {
       console.log("Error: " + e);
     }
   };
 
+  const checkLeagueQualification = (item) => {
+    if (item.note) {
+      return item.note.color;
+    }
+    return "#EEEFB2";
+  };
+
   const displayStandings = standings.map((item, index) => {
     return (
       <tr key={index}>
-        <td>{index + 1}</td>
-        <td>{item.team.name}</td>
+        <td
+          style={{ borderLeft: "5px solid " + checkLeagueQualification(item) }}
+        >
+          {index + 1}
+        </td>
+        <td className="teamTitle">
+          <img src={item.team.logos[0].href} className="standingsLogo" />
+          <span>{item.team.name}</span>
+        </td>
         <td>{item.stats[0].value}</td>
         <td>{item.stats[6].value}</td>
         <td>{item.stats[5].value}</td>
@@ -44,7 +62,7 @@ function Standings() {
         <thead>
           <tr>
             <th>Rank</th>
-            <th>Club</th>
+            <th className="club">Club</th>
             <th>MP</th>
             <th>W</th>
             <th>D</th>
@@ -55,6 +73,24 @@ function Standings() {
 
         <tbody>{displayStandings}</tbody>
       </table>
+
+      {isNote ? (
+        <div className="qualification">
+          <h4>Qualification / Relegations</h4>
+
+          <div>
+            <div className="championsleague">
+              {standings[0].note.description}
+            </div>
+            <div className="europa">{standings[4].note.description}</div>
+            <div className="relegation">
+              {standings[standings.length - 1].note.description}
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }

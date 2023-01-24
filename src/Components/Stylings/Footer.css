@@ -6,13 +6,14 @@ footer {
   font-family: Montserrat;
 }
 .footer-desc {
-  margin: 4rem 4rem;
+  margin: 4rem;
 }
 .footer-title {
   color: #fafafa;
 }
 .crucial-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 2rem;
   border-bottom: 2px solid white;
@@ -39,4 +40,12 @@ footer {
 .bottom-desc i {
   font-size: 1.5rem;
   margin-left: 1rem;
+}
+@media (max-width: 500px) {
+  footer {
+    padding: 0.5rem;
+  }
+  .footer-desc {
+    margin: 2rem;
+  }
 }
