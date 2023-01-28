@@ -41,3 +41,8 @@ table {
   padding-left: 0.4rem;
   margin-top: 0.2rem;
 }
+
+.seasonTitle {
+  font-family: Montserrat;
+  margin: 1rem 0.3rem;
+}

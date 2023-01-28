@@ -40,7 +40,10 @@ function Standings() {
           {index + 1}
         </td>
         <td className="teamTitle">
-          <img src={item.team.logos[0].href} className="standingsLogo" />
+          <img
+            src={item.team.logos && item.team.logos[0].href}
+            className="standingsLogo"
+          />
           <span>{item.team.name}</span>
         </td>
         <td>{item.stats[0].value}</td>
@@ -58,7 +61,9 @@ function Standings() {
 
   return (
     <>
-      <h2>Season - {season}</h2>
+      <h2 className="seasonTitle">
+        Season {season}-{(Number(season) + 1).toString().substring(2)}
+      </h2>
       <table>
         <thead>
           <tr>
@@ -83,7 +88,9 @@ function Standings() {
             <div className="championsleague">
               {standings[0].note.description}
             </div>
-            <div className="europa">{standings[4].note.description}</div>
+            <div className="europa">
+              {standings[4].note && standings[4].note.description}
+            </div>
             <div className="relegation">
               {standings[standings.length - 1].note.description}
             </div>
