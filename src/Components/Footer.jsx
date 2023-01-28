@@ -11,9 +11,9 @@ function Footer() {
             <div>
               <h4>Quick Links</h4>
               <ul>
-                <li>Verify your account</li>
-                  <li>Dashboard</li>
-                <li>Find Roommate/s</li>
+                <li>F1 Racing</li>
+                <li>Baseball</li>
+                <li>Hockey</li>
               </ul>
             </div>
             <div>

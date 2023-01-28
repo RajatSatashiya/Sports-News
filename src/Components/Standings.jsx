@@ -58,6 +58,7 @@ function Standings() {
 
   return (
     <>
+      <h2>Season - {season}</h2>
       <table>
         <thead>
           <tr>

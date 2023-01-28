@@ -34,17 +34,6 @@ nav {
   margin: 0 1rem;
   cursor: pointer;
 }
-/* .nav-list li:hover {
-  color: #d7b6b8;
-} */
-/* .nav-list li:last-child {
-  font-weight: 400;
-  color: #fafafa;
-  background: #2f1f1f;
-  border-radius: 12px;
-  padding: 0.7rem;
-} */
-
 .profile-icon {
   background: black;
   color: white;
@@ -93,5 +82,8 @@ nav {
   }
   .nav-list li {
     margin: 0 0.4rem;
+  }
+  .nav-portion {
+    padding: 1.5rem;
   }
 }

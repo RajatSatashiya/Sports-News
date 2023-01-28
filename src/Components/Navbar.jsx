@@ -20,8 +20,8 @@ function Navbar() {
             <h3 className="project-title">Sports News</h3>
           </Link>
           <ul className="nav-list">
-            <li>Find PGs</li>
-            <li>Rent a Room</li>
+            <li>Football</li>
+            <li>Cricket</li>
             <li
               className="profile-icon"
               onClick={() => {
