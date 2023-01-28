@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import "./Stylings/Standings.css";
 
-function Standings() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const id = searchParams.get("id");
-  const season = searchParams.get("season");
+function Standings({ id, season, leagues }) {
   const [standings, setStandings] = useState([]);
   const [isNote, setIsNote] = useState(false);
 
-  const getStandings = async () => {
+  const getStandings = async (id_value, season_value) => {
     try {
       const response = await fetch(
-        `https://api-football-standings.azharimm.dev/leagues/${id}/standings?season=${season}&sort=asc`
+        `https://api-football-standings.azharimm.dev/leagues/${id_value}/standings?season=${season_value}&sort=asc`
       );
       const data = await response.json();
       setStandings(data.data.standings);
@@ -55,15 +51,31 @@ function Standings() {
     );
   });
 
+  const displayDropdown = leagues.map((item, index) => {
+    const leagueYear = item.displayName.split(" ")[0];
+    return (
+      <option key={index} value={item.year}>
+        {leagueYear}
+      </option>
+    );
+  });
+
   useEffect(() => {
-    getStandings();
+    getStandings(id, season);
   }, []);
 
   return (
     <>
-      <h2 className="seasonTitle">
-        Season {season}-{(Number(season) + 1).toString().substring(2)}
-      </h2>
+      <h2 className="seasonTitle">Season</h2>
+
+      <select
+        onChange={(e) => {
+          getStandings(id, e.target.value);
+        }}
+      >
+        {displayDropdown}
+      </select>
+
       <table>
         <thead>
           <tr>
@@ -86,13 +98,14 @@ function Standings() {
 
           <div>
             <div className="championsleague">
-              {standings[0].note.description}
+              {standings[0].note && standings[0].note.description}
             </div>
             <div className="europa">
               {standings[4].note && standings[4].note.description}
             </div>
             <div className="relegation">
-              {standings[standings.length - 1].note.description}
+              {standings[standings.length - 1].note &&
+                standings[standings.length - 1].note.description}
             </div>
           </div>
         </div>

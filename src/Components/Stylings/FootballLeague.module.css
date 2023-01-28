@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-  margin: 3rem 0 0 2rem;
+  margin: 3rem 0 2rem 0.3rem;
 }
 .title {
   font-family: Roboto;
@@ -29,4 +29,13 @@
 
 .links {
   color: #eceff1;
+}
+
+@media screen and (max-width: 415px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .leagueLogo {
+    width: 5rem;
+  }
 }

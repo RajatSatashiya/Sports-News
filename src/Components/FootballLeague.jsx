@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Stylings/FootballLeague.module.css";
 import { Link } from "react-router-dom";
+import Standings from "./Standings";
 
 function FootballLeague() {
   const [league, setLeague] = useState();
+  const [currentseason, setCurrentseason] = useState(0);
   const [season, setSeason] = useState([]);
   const { id } = useParams();
 
@@ -27,23 +29,11 @@ function FootballLeague() {
       );
       const data = await response.json();
       setSeason(data.data.seasons);
+      setCurrentseason(data.data.seasons[0].year);
     } catch (e) {
       console.log("Error: " + e);
     }
   };
-
-  const displaySeasons = season.map((item, index) => {
-    return (
-      <div key={index} className={styles.panel}>
-        <Link
-          to={`/standings?id=${id}&season=${item.year}`}
-          className={styles.links}
-        >
-          {item.displayName}
-        </Link>
-      </div>
-    );
-  });
 
   useEffect(() => {
     getLeagueData();
@@ -58,7 +48,7 @@ function FootballLeague() {
         </div>
       )}
 
-      {season && <div className={styles.seasons}>{displaySeasons}</div>}
+      <Standings id={id} season={currentseason} leagues={season} />
     </>
   );
 }
