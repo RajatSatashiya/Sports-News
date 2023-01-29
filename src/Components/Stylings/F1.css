@@ -12,3 +12,22 @@
 .raceDetails h4 {
   margin: 1rem 0 0.4rem 0;
 }
+
+.f1select {
+  border: none;
+  font-family: Montserrat;
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  margin: 0.4rem 0;
+}
+
+.grandPrix {
+  font-size: 1.3rem;
+  font-family: Montserrat;
+  margin-top: 1rem;
+}
+
+.prix {
+  width: max-content;
+  margin-top: 0.5rem;
+}

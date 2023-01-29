@@ -29,17 +29,17 @@ function F1() {
 
   const displayResult = apidata.map((item, index) => {
     return (
-      <Link to={`/f1/${year}/${item.round}`} key={index}>
-        <div>
+      <div className="prix" key={index}>
+        <Link to={`/f1/${year}/${item.round}`}>
           {item.round}. {item.raceName}
-        </div>
-      </Link>
+        </Link>
+      </div>
     );
   });
 
   const displayDropdown = seasons.map((item, index) => {
     return (
-      <option key={index} selected={item == year}>
+      <option key={index} value={item} selected={item == year}>
         {item}
       </option>
     );
@@ -65,11 +65,12 @@ function F1() {
             setYear(theseason);
             setSearchParams({ year: theseason });
           }}
+          className="f1select"
         >
           {displayDropdown}
         </select>
 
-        <div>{displayResult}</div>
+        <div className="grandPrix">{displayResult}</div>
       </div>
     </>
   );

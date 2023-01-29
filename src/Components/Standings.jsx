@@ -72,6 +72,8 @@ function Standings({ id, season, leagues }) {
         onChange={(e) => {
           getStandings(id, e.target.value);
         }}
+
+        className="footballSelect"
       >
         {displayDropdown}
       </select>

@@ -48,7 +48,7 @@ table {
   margin: 1rem 0 0.3rem 0.3rem;
 }
 
-select {
+.footballSelect {
   border: none;
   font-family: Montserrat;
   font-size: 1.1rem;
