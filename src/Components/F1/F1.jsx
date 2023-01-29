@@ -19,7 +19,7 @@ function F1() {
 
   const getApiData = async (val) => {
     try {
-      const response = await fetch(`http://ergast.com/api/f1/${val}.json`);
+      const response = await fetch(`https://ergast.com/api/f1/${val}.json`);
       const data = await response.json();
       setApidata(data.MRData.RaceTable.Races);
     } catch (e) {

@@ -11,7 +11,7 @@ function Race() {
   const getApiData = async () => {
     try {
       const response = await fetch(
-        `http://ergast.com/api/f1/${year}/${round}.json`
+        `https://ergast.com/api/f1/${year}/${round}.json`
       );
       const data = await response.json();
       setTitle(data.MRData.RaceTable.Races[0].raceName);
@@ -24,10 +24,12 @@ function Race() {
   const getResults = async () => {
     try {
       const response = await fetch(
-        `http://ergast.com/api/f1/${year}/${round}/results.json`
+        `https://ergast.com/api/f1/${year}/${round}/results.json`
       );
       const data = await response.json();
-      setResults(data.MRData.RaceTable.Races[0].Results);
+      if (data.MRData.RaceTable.Races.length != 0) {
+        setResults(data.MRData.RaceTable.Races[0].Results);
+      }
     } catch (e) {
       console.log("Error: " + e.message);
     }
@@ -72,20 +74,22 @@ function Race() {
         </div>
       )}
 
-      <table>
-        <thead>
-          <tr>
-            <th>Pos</th>
-            <th>Driver</th>
-            <th>Constructor</th>
-            <th>Grid</th>
-            <th>Pts.</th>
-            <th>Status</th>
-          </tr>
-        </thead>
+      {results.length != 0 && (
+        <table>
+          <thead>
+            <tr>
+              <th>Pos</th>
+              <th>Driver</th>
+              <th>Constructor</th>
+              <th>Grid</th>
+              <th>Pts.</th>
+              <th>Status</th>
+            </tr>
+          </thead>
 
-        <tbody>{displayResults}</tbody>
-      </table>
+          <tbody>{displayResults}</tbody>
+        </table>
+      )}
     </>
   );
 }
