@@ -20,16 +20,13 @@ function Navbar() {
             <h3 className="project-title">Sports News</h3>
           </Link>
           <ul className="nav-list">
-            <li>Football</li>
-            <li>Cricket</li>
-            <li
-              className="profile-icon"
-              onClick={() => {
-                setSideshow(!sideshow);
-              }}
-            >
-              {name[0].toUpperCase()}
+            <li>
+              <Link to="/football">Football</Link>
             </li>
+            <li>
+              <Link to="/cricket">Cricket</Link>
+            </li>
+            
           </ul>
         </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Stylings/Footer.css";
 
 function Footer() {
@@ -11,7 +12,9 @@ function Footer() {
             <div>
               <h4>Quick Links</h4>
               <ul>
-                <li>F1 Racing</li>
+                <Link to="/f1">
+                  <li>F1 Racing</li>
+                </Link>
                 <li>Baseball</li>
                 <li>Hockey</li>
               </ul>

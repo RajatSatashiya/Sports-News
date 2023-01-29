@@ -13,24 +13,6 @@ function Competitions() {
       );
       const data = await response.json();
       setCompetitions(data.data);
-
-      /*
-
-        ----------->>>> CRICKET API <<<<<----------
-        
-        const res = await fetch(
-          "https://cricbuzz-cricket.p.rapidapi.com/series/v1/international",
-          {
-            method: "GET",
-            headers: {
-              "X-RapidAPI-Key":
-                "2a8016e8a9msha89647f2eb26617p1fd9d6jsn8c1a21455c46",
-              "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
-            },
-          }
-        );
-        const d = await res.json();
-      */
     } catch (e) {
       console.log("Error: " + e);
     }

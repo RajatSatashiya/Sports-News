@@ -1,0 +1,10 @@
+.cricketList {
+  font-size: 2rem;
+}
+.format {
+  font-size: 1.5rem;
+  display: flex;
+  width: 29rem;
+  background: pink;
+  justify-content: space-evenly;
+}

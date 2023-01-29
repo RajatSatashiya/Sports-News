@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Stylings/FootballLeague.module.css";
-import { Link } from "react-router-dom";
 import Standings from "./Standings";
 
 function FootballLeague() {
