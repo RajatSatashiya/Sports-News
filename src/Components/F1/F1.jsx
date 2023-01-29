@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import "../Stylings/F1.css";
 
 function F1() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [apidata, setApidata] = useState([]);
-  const [year, setYear] = useState(new Date().getFullYear());
+  const [year, setYear] = useState(
+    searchParams.get("year")
+      ? searchParams.get("year")
+      : new Date().getFullYear()
+  );
 
   let seasons = [];
   for (var i = new Date().getFullYear(); i >= 1950; i--) {
@@ -32,11 +38,19 @@ function F1() {
   });
 
   const displayDropdown = seasons.map((item, index) => {
-    return <option key={index}>{item}</option>;
+    return (
+      <option key={index} selected={item == year}>
+        {item}
+      </option>
+    );
   });
 
   useEffect(() => {
-    getApiData(new Date().getFullYear());
+    getApiData(
+      searchParams.get("year")
+        ? searchParams.get("year")
+        : new Date().getFullYear()
+    );
   }, []);
 
   return (
@@ -46,8 +60,10 @@ function F1() {
 
         <select
           onChange={(e) => {
-            getApiData(e.target.value);
-            setYear(e.target.value);
+            const theseason = e.target.value;
+            getApiData(theseason);
+            setYear(theseason);
+            setSearchParams({ year: theseason });
           }}
         >
           {displayDropdown}

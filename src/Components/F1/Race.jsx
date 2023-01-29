@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function Race() {
@@ -26,7 +27,6 @@ function Race() {
         `http://ergast.com/api/f1/${year}/${round}/results.json`
       );
       const data = await response.json();
-      console.log(data.MRData.RaceTable.Races[0].Results);
       setResults(data.MRData.RaceTable.Races[0].Results);
     } catch (e) {
       console.log("Error: " + e.message);
