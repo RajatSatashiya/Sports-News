@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "../Stylings/FootballLeague.module.css";
-import Standings from "../Standings";
+import Standings from "./Standings";
 
 function FootballLeague() {
   const [league, setLeague] = useState();

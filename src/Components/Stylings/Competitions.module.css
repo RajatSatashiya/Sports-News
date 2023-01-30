@@ -35,3 +35,13 @@
   color: #eceff1;
 }
 
+@media screen and (max-width: 415px) {
+  .panel {
+    width: 11rem;
+    font-size: 0.7rem;
+    margin: 0.5rem;
+  }
+  .leagueLogo {
+    width: 6rem;
+  }
+}

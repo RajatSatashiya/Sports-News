@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Stylings/Standings.css";
+import "../Stylings/Standings.css";
+import Results from "./Results";
 
 function Standings({ id, season, leagues }) {
   const [standings, setStandings] = useState([]);
@@ -72,7 +73,6 @@ function Standings({ id, season, leagues }) {
         onChange={(e) => {
           getStandings(id, e.target.value);
         }}
-
         className="footballSelect"
       >
         {displayDropdown}
@@ -114,6 +114,7 @@ function Standings({ id, season, leagues }) {
       ) : (
         ""
       )}
+      <Results />
     </>
   );
 }

@@ -36,7 +36,11 @@ function Competitions() {
   useEffect(() => {
     getLeagues();
   }, []);
-  return <div className={styles.competitions}>{displayItems}</div>;
+  return (
+    <>
+      <div className={styles.competitions}>{displayItems}</div>
+    </>
+  );
 }
 
 export default Competitions;

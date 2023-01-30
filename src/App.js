@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import FootballLeague from "./Components/Football/FootballLeague";
-import Standings from "./Components/Standings";
+import Standings from "./Components/Football/Standings";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Cricket from "./Components/Cricket/Cricket";
