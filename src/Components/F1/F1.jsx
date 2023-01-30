@@ -21,6 +21,7 @@ function F1() {
     try {
       const response = await fetch(`https://ergast.com/api/f1/${val}.json`);
       const data = await response.json();
+      console.log(data.MRData.RaceTable.Races);
       setApidata(data.MRData.RaceTable.Races);
     } catch (e) {
       console.log("Error: " + e.message);

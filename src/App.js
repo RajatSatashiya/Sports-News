@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
-import FootballLeague from "./Components/FootballLeague";
+import FootballLeague from "./Components/Football/FootballLeague";
 import Standings from "./Components/Standings";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -9,6 +9,7 @@ import Cricket from "./Components/Cricket/Cricket";
 import Stats from "./Components/Cricket/Stats";
 import F1 from "./Components/F1/F1";
 import Race from "./Components/F1/Race";
+import Competitions from "./Components/Football/Competitions";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Route path="/f1/:year/:round" element={<Race />} />
 
         {/* Football */}
-        <Route path="/football" element={<Home />} />
+        <Route path="/football" element={<Competitions />} />
         <Route path="/league/:id" element={<FootballLeague />} />
         <Route path="/standings" element={<Standings />} />
       </Routes>
