@@ -80,7 +80,7 @@ function Standings({ id, season, leagues, league }) {
       </select>
 
       <div className="stanFixt">
-        <div>
+        <div className="standingTable">
           <table>
             <thead>
               <tr>
