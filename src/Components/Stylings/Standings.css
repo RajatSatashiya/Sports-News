@@ -56,3 +56,8 @@ table {
   padding: 0.2rem;
   margin-left: 0.3rem;
 }
+
+.stanFixt {
+  display: flex;
+  flex-wrap: wrap;
+}

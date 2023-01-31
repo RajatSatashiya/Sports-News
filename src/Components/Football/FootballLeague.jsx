@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "../Stylings/FootballLeague.module.css";
+import { useSearchParams } from "react-router-dom";
 import Standings from "./Standings";
 
 function FootballLeague() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [league, setLeague] = useState();
   const [currentseason, setCurrentseason] = useState(0);
   const [season, setSeason] = useState([]);
@@ -47,7 +49,12 @@ function FootballLeague() {
         </div>
       )}
 
-      <Standings id={id} season={currentseason} leagues={season} />
+      <Standings
+        id={id}
+        season={currentseason}
+        leagues={season}
+        league={searchParams.get("name")}
+      />
     </>
   );
 }

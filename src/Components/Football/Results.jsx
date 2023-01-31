@@ -21,7 +21,7 @@ function Results() {
         }
       );
       const data = await response.json();
-      console.log(data[0][" Matchday 19 "][0]);
+      // console.log(data[0][" Matchday 19 "][0]);
       setApidata(data[0][" Matchday 19 "]);
       setHomescore(data[0][" Matchday 19 "][0].homeTeamScore);
       setAwayscore(data[0][" Matchday 19 "][0].awayTeamScore);
@@ -63,12 +63,12 @@ function Results() {
   return (
     <>
       <div>{displayResult}</div>
-      <div>
+      {/* <div>
         Villareal {homescore} - {awayscore} Rayo Vallecano
       </div>
       <div>
         Udinese {homescore2} - {awayscore2} Verona
-      </div>
+      </div> */}
     </>
   );
 }

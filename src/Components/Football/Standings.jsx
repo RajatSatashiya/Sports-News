@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../Stylings/Standings.css";
+import Fixtures from "./Fixtures";
 import Results from "./Results";
 
-function Standings({ id, season, leagues }) {
+function Standings({ id, season, leagues, league }) {
   const [standings, setStandings] = useState([]);
   const [isNote, setIsNote] = useState(false);
 
@@ -78,43 +79,52 @@ function Standings({ id, season, leagues }) {
         {displayDropdown}
       </select>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th className="club">Club</th>
-            <th>MP</th>
-            <th>W</th>
-            <th>D</th>
-            <th>L</th>
-            <th>Pts</th>
-          </tr>
-        </thead>
+      <div className="stanFixt">
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th className="club">Club</th>
+                <th>MP</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>Pts</th>
+              </tr>
+            </thead>
 
-        <tbody>{displayStandings}</tbody>
-      </table>
+            <tbody>{displayStandings}</tbody>
+          </table>
 
-      {isNote ? (
-        <div className="qualification">
-          <h4>Qualification / Relegations</h4>
+          {isNote ? (
+            <div className="qualification">
+              <h4>Qualification / Relegations</h4>
 
-          <div>
-            <div className="championsleague">
-              {standings[0].note && standings[0].note.description}
+              <div>
+                <div className="championsleague">
+                  {standings[0].note && standings[0].note.description}
+                </div>
+                <div className="europa">
+                  {standings[4].note && standings[4].note.description}
+                </div>
+                <div className="relegation">
+                  {standings[standings.length - 1].note &&
+                    standings[standings.length - 1].note.description}
+                </div>
+              </div>
             </div>
-            <div className="europa">
-              {standings[4].note && standings[4].note.description}
-            </div>
-            <div className="relegation">
-              {standings[standings.length - 1].note &&
-                standings[standings.length - 1].note.description}
-            </div>
-          </div>
+          ) : (
+            ""
+          )}
         </div>
-      ) : (
-        ""
-      )}
-      <Results />
+
+        <div>
+          <Fixtures league={league} />
+        </div>
+      </div>
+
+      {/* <Results /> */}
     </>
   );
 }

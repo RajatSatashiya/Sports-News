@@ -26,7 +26,10 @@ function Competitions() {
           alt={item.slug}
           className={styles.leagueLogo}
         />
-        <Link to={`/league/${item.id}`} className={styles.links}>
+        <Link
+          to={`/league/${item.id}?name=${item.name}`}
+          className={styles.links}
+        >
           <div>{item.name}</div>
         </Link>
       </div>
@@ -46,3 +49,5 @@ function Competitions() {
 export default Competitions;
 
 // other working football api -> https://football98.p.rapidapi.com/competitions
+// tipsscore.com
+// football web pages
