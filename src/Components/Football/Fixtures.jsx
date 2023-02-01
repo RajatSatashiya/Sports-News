@@ -54,7 +54,7 @@ function Fixtures({ league }) {
   });
 
   useEffect(() => {
-    // getApiData();
+    if (LeagueMap[league]) getApiData();
   }, []);
 
   return (
