@@ -6,7 +6,7 @@ import Standings from "./Components/Football/Standings";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Cricket from "./Components/Cricket/Cricket";
-import Stats from "./Components/Cricket/Stats";
+// import Stats from "./Components/Cricket/Stats";
 import F1 from "./Components/F1/F1";
 import Race from "./Components/F1/Race";
 import Competitions from "./Components/Football/Competitions";
@@ -21,7 +21,7 @@ function App() {
 
         {/* Cricket */}
         <Route path="/cricket" element={<Cricket />} />
-        <Route path="/cricket/stats" element={<Stats />} />
+        {/* <Route path="/cricket/stats" element={<Stats />} /> */}
 
         {/* F1 */}
         <Route path="/f1" element={<F1 />} />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../Stylings/Standings.css";
 import Fixtures from "./Fixtures";
-import Results from "./Results";
 
 function Standings({ id, season, leagues, league }) {
   const [standings, setStandings] = useState([]);
