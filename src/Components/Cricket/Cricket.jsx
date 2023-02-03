@@ -74,8 +74,9 @@ function Cricket() {
           <h3>{matchdata.seriesName}</h3>
           <div className="series">
             {matchdata.matches.map((match, index2) => {
-              const firstInn = match.matchScore.team1Score.inngs1;
-              const secondInn = match.matchScore.team2Score.inngs1;
+              console.log(match);
+              const firstInn = match.matchScore && match.matchScore.team1Score;
+              const secondInn = match.matchScore && match.matchScore.team2Score;
               return (
                 <div key={index2} className="match">
                   <h3>
@@ -85,15 +86,21 @@ function Cricket() {
                   <div className="scores">
                     <div className="teamScore">
                       {match.matchInfo.team1.teamName}
-                      <div className="score">
-                        {firstInn.runs}/{firstInn.wickets} ({firstInn.overs})
-                      </div>
+                      {firstInn && (
+                        <div className="score">
+                          {firstInn.inngs1.runs}/{firstInn.inngs1.wickets} (
+                          {firstInn.inngs1.overs})
+                        </div>
+                      )}
                     </div>
                     <div className="teamScore">
                       {match.matchInfo.team2.teamName}
-                      <div className="score">
-                        {secondInn.runs}/{secondInn.wickets} ({secondInn.overs})
-                      </div>
+                      {secondInn && (
+                        <div className="score">
+                          {secondInn.inngs1.runs}/{secondInn.inngs1.wickets} (
+                          {secondInn.inngs1.overs})
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="status">{match.matchInfo.status}</div>
@@ -153,7 +160,7 @@ function Cricket() {
               const firstInn = match.matchScore.team1Score;
               const secondInn = match.matchScore.team2Score;
               return (
-                <div className="match">
+                <div className="match" key={index2}>
                   <h3>
                     {match.matchInfo.matchDesc},{" "}
                     {match.matchInfo.venueInfo.city}
@@ -190,8 +197,8 @@ function Cricket() {
 
   useEffect(() => {
     getLiveMatches();
-    getUpcomingMatches();
-    getRecentMatches();
+    // getUpcomingMatches();
+    // getRecentMatches();
   }, [type]);
 
   return (
