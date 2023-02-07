@@ -19,7 +19,6 @@ function Fixtures({ league }) {
         }
       );
       const data = await response.json();
-      // console.log(data);
       setResults(data);
     } catch (e) {
       console.log("Error: " + e.message);
@@ -107,8 +106,8 @@ function Fixtures({ league }) {
 
   useEffect(() => {
     if (LeagueMap[league]) {
-      // getResults();
-      // getApiData();
+      getResults();
+      getApiData();
     }
   }, []);
 
