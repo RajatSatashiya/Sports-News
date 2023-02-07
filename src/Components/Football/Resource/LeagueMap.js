@@ -5,6 +5,7 @@ export const LeagueMap = {
   "Chinese Super League": "chinesesuperleague",
   "Dutch Eredivisie": "eredivisie",
   "English Premier League": "premierleague",
+  "French Ligue 1": "ligue1ubereats",
   "Italian Serie A": "seriea",
   "Japanese J League": "j.league",
   "Malaysian Super League": "ligasupermalaysia",
