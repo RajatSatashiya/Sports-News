@@ -24,7 +24,6 @@ function F1() {
     try {
       const response = await fetch(`https://ergast.com/api/f1/${val}.json`);
       const data = await response.json();
-      console.log(data.MRData.RaceTable.Races);
       setApidata(data.MRData.RaceTable.Races);
     } catch (e) {
       console.log("Error: " + e.message);
@@ -34,10 +33,9 @@ function F1() {
   const getStandings = async (val) => {
     try {
       const response = await fetch(
-        `http://ergast.com/api/f1/${val}/driverStandings.json`
+        `https://ergast.com/api/f1/${val}/driverStandings.json`
       );
       const data = await response.json();
-      console.log(data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
       setStandings(
         data.MRData.StandingsTable.StandingsLists[0].DriverStandings
       );
@@ -79,11 +77,11 @@ function F1() {
   });
 
   useEffect(() => {
-    getApiData(
-      searchParams.get("year")
-        ? searchParams.get("year")
-        : new Date().getFullYear()
-    );
+    // getApiData(
+    //   searchParams.get("year")
+    //     ? searchParams.get("year")
+    //     : new Date().getFullYear()
+    // );
     getStandings(
       searchParams.get("year")
         ? searchParams.get("year")
@@ -99,6 +97,7 @@ function F1() {
           onChange={(e) => {
             const theseason = e.target.value;
             getApiData(theseason);
+            getStandings(theseason);
             setYear(theseason);
             setSearchParams({ year: theseason });
           }}
@@ -110,7 +109,7 @@ function F1() {
         <div className="f1Standings-container">
           <div className="grandPrix">{displayResult}</div>
 
-          <div className="standingTable f1Table">
+          <div className="f1Table">
             <table>
               <thead>
                 <tr>
