@@ -74,7 +74,6 @@ function Cricket() {
           <h3>{matchdata.seriesName}</h3>
           <div className="series">
             {matchdata.matches.map((match, index2) => {
-              console.log(match);
               const firstInn = match.matchScore && match.matchScore.team1Score;
               const secondInn = match.matchScore && match.matchScore.team2Score;
               return (
@@ -97,8 +96,9 @@ function Cricket() {
                       {match.matchInfo.team2.teamName}
                       {secondInn && (
                         <div className="score">
-                          {secondInn.inngs1.runs}/{secondInn.inngs1.wickets} (
-                          {secondInn.inngs1.overs})
+                          {secondInn.inngs1 && secondInn.inngs1.runs}/
+                          {secondInn.inngs1 && secondInn.inngs1.wickets} (
+                          {secondInn.inngs1 && secondInn.inngs1.overs})
                         </div>
                       )}
                     </div>

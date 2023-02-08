@@ -49,13 +49,13 @@
   text-align: left;
 }
 
-tbody tr:first-child {
+.f1-tbody tr:first-child {
   background: gold;
 }
-tbody tr:nth-child(2) {
+.f1-tbody tr:nth-child(2) {
   background: silver;
 }
-tbody tr:nth-child(3) {
+.f1-tbody tr:nth-child(3) {
   background: #cd7f32;
 }
 

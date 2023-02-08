@@ -120,7 +120,7 @@ function F1() {
                   <th>Wins</th>
                 </tr>
               </thead>
-              <tbody>{displayDriversStandings}</tbody>
+              <tbody className="f1-tbody">{displayDriversStandings}</tbody>
             </table>
           </div>
         </div>
