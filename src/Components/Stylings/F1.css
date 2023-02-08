@@ -22,7 +22,7 @@
 }
 
 .grandPrix {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: Montserrat;
   margin-top: 1rem;
 }
@@ -30,4 +30,38 @@
 .prix {
   width: max-content;
   margin-top: 0.5rem;
+}
+
+.f1Standings-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.f1Table * {
+  padding: 0.7rem;
+  border: 1px solid black;
+}
+
+.f1Table td:nth-child(2),
+.f1Table td:nth-child(3),
+.f1Table th:nth-child(2),
+.f1Table th:nth-child(3) {
+  text-align: left;
+}
+
+tbody tr:first-child {
+  background: gold;
+}
+tbody tr:nth-child(2) {
+  background: silver;
+}
+tbody tr:nth-child(3) {
+  background: #cd7f32;
+}
+
+.f1Table {
+  /* background: pink; */
+  margin: 0 auto;
+  flex: 0.5;
 }
