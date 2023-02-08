@@ -9,7 +9,7 @@ function Cricket() {
   const [typeIndex, setTypeIndex] = useState(0);
 
   useEffect(() => {
-    // getMatches();
+    getMatches();
   }, [matchType, typeIndex]);
 
   const getMatches = async () => {
