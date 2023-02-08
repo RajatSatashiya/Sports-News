@@ -77,11 +77,11 @@ function F1() {
   });
 
   useEffect(() => {
-    // getApiData(
-    //   searchParams.get("year")
-    //     ? searchParams.get("year")
-    //     : new Date().getFullYear()
-    // );
+    getApiData(
+      searchParams.get("year")
+        ? searchParams.get("year")
+        : new Date().getFullYear()
+    );
     getStandings(
       searchParams.get("year")
         ? searchParams.get("year")

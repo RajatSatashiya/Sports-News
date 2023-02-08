@@ -35,7 +35,6 @@
 .f1Standings-container {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 
 .f1Table * {
@@ -68,5 +67,9 @@ tbody tr:nth-child(3) {
 @media screen and (max-width: 600px) {
   .f1Table {
     margin: 0;
+  }
+
+  .f1Table * {
+    padding: 0.3rem;
   }
 }
