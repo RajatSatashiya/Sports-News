@@ -22,7 +22,7 @@
 .match {
   background: silver;
   margin: 1rem 0;
-  width: 20rem;
+  min-width: 20rem;
   /* width: max-content; */
   padding: 0.5rem;
   padding-left: 0.5rem;
@@ -48,4 +48,22 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.cricketNav {
+  background: #1d1d27;
+  color: #fafafa;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  font-family: Montserrat;
+}
+
+.cricketNav div {
+  cursor: pointer;
+}
+
+.teamScore {
+  display: flex;
+  justify-content: space-between;
 }
