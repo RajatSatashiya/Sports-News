@@ -107,7 +107,7 @@ function Fixtures({ league }) {
   useEffect(() => {
     if (LeagueMap[league]) {
       getResults();
-      // getApiData();
+      getApiData();
     }
   }, []);
 
