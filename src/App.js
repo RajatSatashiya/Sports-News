@@ -10,6 +10,7 @@ import Cricket from "./Components/Cricket/Cricket";
 import F1 from "./Components/F1/F1";
 import Race from "./Components/F1/Race";
 import Competitions from "./Components/Football/Competitions";
+import Scorecard from "./Components/Cricket/Scorecard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
         {/* Cricket */}
         <Route path="/cricket" element={<Cricket />} />
+        <Route path="/cricket/match/:matchId" element={<Scorecard />} />
         {/* <Route path="/cricket/stats" element={<Stats />} /> */}
 
         {/* F1 */}

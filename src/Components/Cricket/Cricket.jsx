@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import moment from "moment";
 import "../Stylings/Cricket.css";
 
@@ -25,6 +26,7 @@ function Cricket() {
         }
       );
       const data = await response.json();
+      console.log(data);
       setType(data.typeMatches);
       setMatches(data.typeMatches[typeIndex].seriesMatches);
     } catch (e) {
@@ -52,23 +54,35 @@ function Cricket() {
               let matchDate = match.matchInfo.startDate;
               matchDate = new Date(parseInt(matchDate));
               let checking = moment(matchDate).format("Do MMM YYYY, hh:mm a");
-              const firstInn = match.matchScore && match.matchScore.team1Score;
-              const secondInn = match.matchScore && match.matchScore.team2Score;
+              let team1 = "";
+              let team2 = "";
+              if (match.matchScore) {
+                team1 = match.matchScore.team1Score;
+                team2 = match.matchScore.team2Score;
+              }
 
               return (
                 <div key={index2} className="match">
-                  <h3>
-                    {match.matchInfo.matchDesc},{" "}
-                    {match.matchInfo.venueInfo.city}
-                  </h3>
+                  <Link to={`/cricket/match/${match.matchInfo.matchId}`}>
+                    <h3>
+                      {match.matchInfo.matchDesc},{" "}
+                      {match.matchInfo.venueInfo.city}
+                    </h3>
+                  </Link>
                   <div className="scores">
                     <div className="teamScore">
                       <div>{match.matchInfo.team1.teamName}</div>
                       <div>
-                        {firstInn && (
+                        {team1 && (
                           <div className="score">
-                            {firstInn.inngs1.runs}/{firstInn.inngs1.wickets} (
-                            {firstInn.inngs1.overs})
+                            {team1.inngs1.runs}/{team1.inngs1.wickets} (
+                            {team1.inngs1.overs})
+                            {team1.inngs2 && (
+                              <div className="secondinn">
+                                & {team1.inngs2.runs}/{team1.inngs2.wickets} (
+                                {team1.inngs2.overs})
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
@@ -76,11 +90,17 @@ function Cricket() {
                     <div className="teamScore">
                       <div>{match.matchInfo.team2.teamName}</div>
                       <div>
-                        {secondInn && (
+                        {team2 && (
                           <div className="score">
-                            {secondInn.inngs1 && secondInn.inngs1.runs}/
-                            {secondInn.inngs1 && secondInn.inngs1.wickets} (
-                            {secondInn.inngs1 && secondInn.inngs1.overs})
+                            {team2.inngs1 && team2.inngs1.runs}/
+                            {team2.inngs1 && team2.inngs1.wickets} (
+                            {team2.inngs1 && team2.inngs1.overs})
+                            {team2.inngs2 && (
+                              <div>
+                                & {team2.inngs2.runs}/{team2.inngs2.wickets} (
+                                {team2.inngs2.overs})
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
