@@ -75,12 +75,16 @@ function Cricket() {
                       <div>
                         {team1 && (
                           <div className="score">
-                            {team1.inngs1.runs}/{team1.inngs1.wickets} (
-                            {team1.inngs1.overs})
+                            {team1.inngs1.runs}/
+                            {team1.inngs1.wickets ? team1.inngs1.wickets : "0"}{" "}
+                            ({team1.inngs1.overs})
                             {team1.inngs2 && (
                               <div className="secondinn">
-                                & {team1.inngs2.runs}/{team1.inngs2.wickets} (
-                                {team1.inngs2.overs})
+                                & {team1.inngs2.runs}/
+                                {team1.inngs2.wickets
+                                  ? team1.inngs2.wickets
+                                  : "0"}{" "}
+                                ({team1.inngs2.overs})
                               </div>
                             )}
                           </div>
@@ -93,12 +97,17 @@ function Cricket() {
                         {team2 && (
                           <div className="score">
                             {team2.inngs1 && team2.inngs1.runs}/
-                            {team2.inngs1 && team2.inngs1.wickets} (
-                            {team2.inngs1 && team2.inngs1.overs})
+                            {team2.inngs1 && team2.inngs1.wickets
+                              ? team2.inngs1.wickets
+                              : "0"}{" "}
+                            ({team2.inngs1 && team2.inngs1.overs})
                             {team2.inngs2 && (
                               <div>
-                                & {team2.inngs2.runs}/{team2.inngs2.wickets} (
-                                {team2.inngs2.overs})
+                                & {team2.inngs2.runs}/
+                                {team2.inngs2.wickets
+                                  ? team2.inngs2.wickets
+                                  : "0"}{" "}
+                                ({team2.inngs2.overs})
                               </div>
                             )}
                           </div>

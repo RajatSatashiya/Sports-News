@@ -71,3 +71,63 @@
 .secondinn {
   margin-bottom: 0.7rem;
 }
+
+/* TODO: SCORECARD.JSX */
+.matchstatus {
+  color: red;
+}
+
+.innsTitle {
+  background: #1d1d27;
+  color: #95a7d8;
+  font-family: Poppins;
+  padding: 0.8rem;
+  /* margin: 4rem 0 0 0; */
+  font-size: 0.9rem;
+}
+
+.scorecard {
+  background: #d7b6b8;
+  color: #1d1d2e;
+  padding: 1rem;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.player {
+  text-align: left;
+}
+
+.extra {
+  position: absolute;
+  top: -30px;
+  color: #95a7d8;
+  right: 20px;
+}
+
+.bowling {
+  color: #2cb1a5;
+}
+
+.bowling table {
+  background: #95a7d8;
+}
+
+.bowling .scorecard {
+  margin-bottom: 3rem;
+}
+
+.bowling .innsTitle {
+  margin: 0;
+  color: #ffbd4a;
+}
+
+.innings {
+  font-family: Inter;
+  margin: 1rem 0 0.2rem 0.4rem;
+}
+
+.playerDesc {
+  font-size: 0.7rem;
+}
