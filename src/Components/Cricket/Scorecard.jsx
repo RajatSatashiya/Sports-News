@@ -8,7 +8,7 @@ function Template() {
   const { matchId } = useParams();
 
   useEffect(() => {
-    // getApiData();
+    getApiData();
   }, []);
 
   const getApiData = async () => {
