@@ -25,7 +25,6 @@ function Template() {
       );
       const data = await response.json();
       setMatchStatus(data.status);
-      console.log(data.scoreCard);
       setApidata(data.scoreCard);
     } catch (e) {
       console.log("Error: " + e.message);
@@ -34,7 +33,6 @@ function Template() {
 
   const BowlingData = (data) => {
     const bowlers = Object.keys(data.bowlersData);
-
     return bowlers.map((bowler, index) => {
       const bowlerData = data.bowlersData[bowler];
 
@@ -56,7 +54,19 @@ function Template() {
   };
 
   const BattingData = (data) => {
-    const batsmen = Object.keys(data.batsmenData);
+    let batsmen = [
+      "bat_1",
+      "bat_2",
+      "bat_3",
+      "bat_4",
+      "bat_5",
+      "bat_6",
+      "bat_7",
+      "bat_8",
+      "bat_9",
+      "bat_10",
+      "bat_11",
+    ];
 
     return batsmen.map((batsman, index) => {
       const batsmanData = data.batsmenData[batsman];
