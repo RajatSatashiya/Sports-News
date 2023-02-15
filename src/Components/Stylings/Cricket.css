@@ -128,6 +128,24 @@
   margin: 1rem 0 0.2rem 0.4rem;
 }
 
+.cricket-standings {
+  color: white;
+}
+
+.tourDeSeries {
+  font-family: "Inter";
+  margin: 1rem;
+}
+
+.tourDeSeries h1 {
+  margin-bottom: 1rem;
+}
+
+.CricketSeries {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 415px) {
   .scorecard {
     padding: 0.5rem;

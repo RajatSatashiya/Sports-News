@@ -26,7 +26,6 @@ function Cricket() {
         }
       );
       const data = await response.json();
-      console.log(data);
       setType(data.typeMatches);
       setMatches(data.typeMatches[typeIndex].seriesMatches);
     } catch (e) {
@@ -149,6 +148,11 @@ function Cricket() {
           }}
         >
           Recent Matches
+        </div>
+        <div>
+          <Link to="/series" className="cricket-standings">
+            Standings
+          </Link>
         </div>
       </div>
       <div className="container">

@@ -17,7 +17,7 @@ function Navbar() {
       <nav ref={navbar} className="nav2">
         <div className="nav-portion">
           <Link to="/">
-            <h3 className="project-title">Sports News</h3>
+            <h3 className="project-title">The Final Whistle</h3>
           </Link>
           <ul className="nav-list">
             <li>
@@ -26,7 +26,6 @@ function Navbar() {
             <li>
               <Link to="/cricket">Cricket</Link>
             </li>
-            
           </ul>
         </div>
 

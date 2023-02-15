@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <h2 className="project-title footer-title">Sports News</h2>
+        <h2 className="project-title footer-title">The Final Whistle</h2>
         <div className="footer-desc">
           <div className="crucial-links">
             <div>
@@ -45,7 +45,7 @@ function Footer() {
 
           <div className="bottom-desc">
             <div>
-              Copyright © 2021-2022 Roommate Finder. All rights reserved
+              Copyright © 22-2023 The Final Whistle. All rights reserved
             </div>
             <div className="social-icons">
               <i className="fab fa-instagram"></i>

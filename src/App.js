@@ -6,11 +6,13 @@ import Standings from "./Components/Football/Standings";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Cricket from "./Components/Cricket/Cricket";
+import Series from "./Components/Cricket/Series";
 // import Stats from "./Components/Cricket/Stats";
 import F1 from "./Components/F1/F1";
 import Race from "./Components/F1/Race";
 import Competitions from "./Components/Football/Competitions";
 import Scorecard from "./Components/Cricket/Scorecard";
+import PointsTable from "./Components/Cricket/PointsTable";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         {/* Cricket */}
         <Route path="/cricket" element={<Cricket />} />
         <Route path="/cricket/match/:matchId" element={<Scorecard />} />
+        <Route path="/series" element={<Series />} />
+        <Route path="/series/:id" element={<PointsTable />} />
         {/* <Route path="/cricket/stats" element={<Stats />} /> */}
 
         {/* F1 */}
