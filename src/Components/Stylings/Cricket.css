@@ -87,11 +87,11 @@
 }
 
 .scorecard {
-  background: #d7b6b8;
+  background: #ffbd4a;
   color: #1d1d2e;
   padding: 1rem;
   width: 100%;
-  margin: 0;
+  margin: 1rem 0;
   position: relative;
 }
 

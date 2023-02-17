@@ -15,8 +15,8 @@ function Footer() {
                 <Link to="/f1">
                   <li>F1 Racing</li>
                 </Link>
-                <li>Baseball</li>
-                <li>Hockey</li>
+                <li>Cricket</li>
+                <li>Football</li>
               </ul>
             </div>
             <div>
@@ -37,15 +37,15 @@ function Footer() {
             <div>
               <h4>Contact</h4>
               <ul>
-                <li>Ahmedabad, Gujarat, India 132843</li>
-                <li>random@gmail.com</li>
+                <li>Ahmedabad, Gujarat</li>
+                <li>kshri4398@gmail.com</li>
               </ul>
             </div>
           </div>
 
           <div className="bottom-desc">
             <div>
-              Copyright © 22-2023 The Final Whistle. All rights reserved
+              Copyright © 2022-2023 The Final Whistle. All rights reserved
             </div>
             <div className="social-icons">
               <i className="fab fa-instagram"></i>

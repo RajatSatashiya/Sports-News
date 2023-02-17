@@ -18,7 +18,7 @@ function PointsTable() {
         }
       );
       const data = await response.json();
-      setApidata(data.pointsTable[0].pointsTableInfo);
+      setApidata(data.pointsTable);
     } catch (e) {
       console.log("Error: " + e.message);
     }
@@ -26,30 +26,11 @@ function PointsTable() {
 
   const displayResult = apidata.map((item, index) => {
     return (
-      <tr key={index}>
-        <td>{index + 1}</td>
-        <td className="player">{item.teamFullName}</td>
-        <td>{item.matchesPlayed ? item.matchesPlayed : "0"}</td>
-        <td>{item.matchesWon ? item.matchesWon : "0"}</td>
-        <td>{item.matchesLost ? item.matchesLost : "0"}</td>
-        <td>{item.nrr}</td>
-        <td>{item.points ? item.points : "0"}</td>
-        <td>{item.form.join(" ")}</td>
-      </tr>
-    );
-  });
-
-  useEffect(() => {
-    getApiData();
-  }, []);
-
-  return (
-    <>
-      <table className="scorecard">
+      <table className="scorecard" key={index}>
         <thead>
           <tr>
             <th>Sr.</th>
-            <th className="player">Team</th>
+            <th className="player">{item.groupName}</th>
             <th>M</th>
             <th>W</th>
             <th>L</th>
@@ -59,10 +40,31 @@ function PointsTable() {
           </tr>
         </thead>
 
-        <tbody>{displayResult}</tbody>
+        <tbody>
+          {item.pointsTableInfo.map((row, index2) => {
+            return (
+              <tr key={index2}>
+                <td>{index2 + 1}</td>
+                <td className="player">{row.teamFullName}</td>
+                <td>{row.matchesPlayed ? row.matchesPlayed : "0"}</td>
+                <td>{row.matchesWon ? row.matchesWon : "0"}</td>
+                <td>{row.matchesLost ? row.matchesLost : "0"}</td>
+                <td>{row.nrr}</td>
+                <td>{row.points ? row.points : "0"}</td>
+                <td>{row.form.join(" ")}</td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
-    </>
-  );
+    );
+  });
+
+  useEffect(() => {
+    // getApiData();
+  }, []);
+
+  return <>{displayResult}</>;
 }
 
 export default PointsTable;

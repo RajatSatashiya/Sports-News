@@ -17,6 +17,11 @@ function Navbar() {
       <nav ref={navbar} className="nav2">
         <div className="nav-portion">
           <Link to="/">
+            <img
+              src="./TheFinalWhistle.png"
+              alt="the final whistle logo"
+              className="nav-logo"
+            />
             <h3 className="project-title">The Final Whistle</h3>
           </Link>
           <ul className="nav-list">
