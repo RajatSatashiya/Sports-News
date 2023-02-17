@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import "../Stylings/F1.css";
-import { standings2022, rounds2022 } from "./Resource/F1Resource";
+import {
+  standings2022,
+  rounds2022,
+  constructorLogo,
+} from "./Resource/F1Resource";
 
 function F1() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,12 +50,24 @@ function F1() {
 
   const displayDriversStandings = standings.map((item, index) => {
     return (
-      <tr key={index}>
+      <tr key={index} className="tableRow">
         <td>{item.positionText}</td>
         <td>
           {item.Driver.givenName} {item.Driver.familyName}
         </td>
-        <td>{item.Constructors[0] && item.Constructors[0].name}</td>
+        <td className="constructorColumn">
+          {item.Constructors[0] && (
+            <img
+              src={`${
+                item.Constructors[0].name in constructorLogo
+                  ? constructorLogo[item.Constructors[0].name]
+                  : "https://cdn-icons-png.flaticon.com/512/16/16096.png"
+              }`}
+              className="constructorLogo"
+            />
+          )}
+          {item.Constructors[0] && item.Constructors[0].name}
+        </td>
         <td>{item.points}</td>
         <td>{item.wins}</td>
       </tr>

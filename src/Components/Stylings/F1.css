@@ -39,7 +39,7 @@
 
 .f1Table * {
   padding: 0.7rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .f1Table td:nth-child(2),
@@ -47,6 +47,11 @@
 .f1Table th:nth-child(2),
 .f1Table th:nth-child(3) {
   text-align: left;
+}
+
+.f1-tbody td,
+.f1Table th {
+  border: 1px solid black;
 }
 
 .f1-tbody tr:first-child {
@@ -64,9 +69,28 @@
   flex: 0.5;
 }
 
+.f1Table table {
+  border: 1px solid black;
+}
+
+.constructorLogo {
+  width: 4rem;
+  border: none;
+}
+
+.constructorColumn {
+  display: flex;
+  border: none;
+  align-items: center;
+}
+
 @media screen and (max-width: 600px) {
   .f1Table {
     margin: 0;
+  }
+
+  .constructorLogo {
+    width: 3rem;
   }
 
   .f1Table * {

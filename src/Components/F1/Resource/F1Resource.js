@@ -1302,3 +1302,41 @@ export const rounds2022 = [
     },
   },
 ];
+
+export const constructorLogo = {
+  "Red Bull":
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/red-bull-racing-logo.png.transform/2col/image.png",
+  Ferrari:
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/ferrari-logo.png.transform/2col/image.png",
+  Mercedes:
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/mercedes-logo.png.transform/2col/image.png",
+  McLaren:
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/mclaren-logo.png.transform/2col/image.png",
+  "Alpine F1 Team":
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/alpine-logo.png.transform/2col/image.png",
+  "Alfa Romeo":
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/alfa-romeo-logo.png.transform/2col/image.png",
+  "Aston Martin":
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/aston-martin-logo.png.transform/2col/image.png",
+  "Haas F1 Team":
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/haas-f1-team-logo.png.transform/2col/image.png",
+  AlphaTauri:
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/alphatauri-logo.png.transform/2col/image.png",
+  Williams:
+    "https://www.formula1.com/content/dam/fom-website/teams/2023/williams-logo.png.transform/2col/image.png",
+
+  "Racing Point":
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqp-bw6yUTyzDfeXUw9qjjCoMqlNMVLpBGK1s7gtn-yoVWRfOEr33KTzt2ZoKTVWwV6FE&usqp=CAU",
+  Sauber:
+    "https://upload.wikimedia.org/wikipedia/commons/e/ea/Logo_Sauber_F1.png",
+  Renault:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEnByiSFzIHBGamrDiNe5CFktBB6d1AVTFL8BE2GdOExRAcFQ5H4uAZ8rVatIGn7qJ9o&usqp=CAU",
+  "Toro Rosso":
+    "https://w7.pngwing.com/pngs/914/102/png-transparent-scuderia-toro-rosso-formula-1-red-bull-racing-sport-toro-rosso-str1-formula-1-love-text-team.png",
+  "Force India":
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5MMvCWMSiOOcFWTMTPFxY7PH6VmoWgUUdrXFw0mKKHaiMH66d_2KdFe8twf-2g3UDyA&usqp=CAU",
+  "Manor Marussia":
+    "https://upload.wikimedia.org/wikipedia/commons/5/59/Manor_F1_Team_logo.png",
+  "Lotus F1":
+    "https://www.nicepng.com/png/full/342-3429326_lotus-logo-lotus-f1-team-bag.png",
+};
