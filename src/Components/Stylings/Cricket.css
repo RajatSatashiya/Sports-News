@@ -87,11 +87,11 @@
 }
 
 .scorecard {
-  background: #ffbd4a;
+  background: #d7b6b8;
   color: #1d1d2e;
   padding: 1rem;
   width: 100%;
-  margin: 1rem 0;
+  margin: 0rem 0;
   position: relative;
 }
 
@@ -143,6 +143,10 @@
 
 .CricketSeries {
   margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pointstable {
   margin-bottom: 1rem;
 }
 

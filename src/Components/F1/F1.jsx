@@ -65,8 +65,8 @@ function F1() {
               }`}
               className="constructorLogo"
             />
-          )}
-          {item.Constructors[0] && item.Constructors[0].name}
+          )}{" "}
+          {item.Constructors[0] ? item.Constructors[0].name : "Nil"}
         </td>
         <td>{item.points}</td>
         <td>{item.wins}</td>

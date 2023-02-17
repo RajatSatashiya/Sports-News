@@ -79,8 +79,8 @@
 }
 
 .constructorColumn {
+  height: 3.5rem;
   display: flex;
-  border: none;
   align-items: center;
 }
 
@@ -95,5 +95,9 @@
 
   .f1Table * {
     padding: 0.3rem;
+  }
+
+  .calendar {
+    margin-left: 0.3rem;
   }
 }

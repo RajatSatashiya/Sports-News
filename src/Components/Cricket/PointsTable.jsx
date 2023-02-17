@@ -26,7 +26,7 @@ function PointsTable() {
 
   const displayResult = apidata.map((item, index) => {
     return (
-      <table className="scorecard" key={index}>
+      <table className="scorecard pointstable" key={index}>
         <thead>
           <tr>
             <th>Sr.</th>
