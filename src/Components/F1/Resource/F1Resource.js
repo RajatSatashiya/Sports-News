@@ -1339,4 +1339,49 @@ export const constructorLogo = {
     "https://upload.wikimedia.org/wikipedia/commons/5/59/Manor_F1_Team_logo.png",
   "Lotus F1":
     "https://www.nicepng.com/png/full/342-3429326_lotus-logo-lotus-f1-team-bag.png",
+  "Team Lotus":
+    "https://www.nicepng.com/png/full/342-3429326_lotus-logo-lotus-f1-team-bag.png",
+};
+
+export const countryFlag = {
+  Argentine: "https://www.worldometers.info/img/flags/small/tn_ar-flag.gif",
+  American: "https://www.worldometers.info/img/flags/small/tn_us-flag.gif",
+  Austrian: "https://www.worldometers.info/img/flags/small/tn_au-flag.gif",
+  Australian: "https://www.worldometers.info/img/flags/small/tn_as-flag.gif",
+  British: "https://www.worldometers.info/img/flags/small/tn_uk-flag.gif",
+  Brazilian: "https://www.worldometers.info/img/flags/small/tn_br-flag.gif",
+  Belgian: "https://www.worldometers.info/img/flags/small/tn_be-flag.gif",
+  Canadian: "https://www.worldometers.info/img/flags/small/tn_ca-flag.gif",
+  Chilean: "https://www.worldometers.info/img/flags/small/tn_ci-flag.gif",
+  Czech: "https://www.worldometers.info/img/flags/small/tn_ez-flag.gif",
+  Colombian: "https://www.worldometers.info/img/flags/small/tn_co-flag.gif",
+  Chinese: "https://www.worldometers.info/img/flags/small/tn_ch-flag.gif",
+  Dutch: "https://www.worldometers.info/img/flags/small/tn_nl-flag.gif",
+  Danish: "https://www.worldometers.info/img/flags/small/tn_da-flag.gif",
+  Finnish: "https://www.worldometers.info/img/flags/small/tn_fi-flag.gif",
+  French: "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+  German: "https://www.worldometers.info/img/flags/small/tn_gm-flag.gif",
+  Hungarian: "https://www.worldometers.info/img/flags/small/tn_hu-flag.gif",
+  Irish: "https://www.worldometers.info/img/flags/small/tn_ei-flag.gif",
+  Indian: "https://www.worldometers.info/img/flags/small/tn_in-flag.gif",
+  Italian: "https://www.worldometers.info/img/flags/small/tn_it-flag.gif",
+  Japanese: "https://www.worldometers.info/img/flags/small/tn_ja-flag.gif",
+  Liechtensteiner:
+    "https://www.worldometers.info/img/flags/small/tn_ls-flag.gif",
+  Monegasque: "https://www.worldometers.info/img/flags/small/tn_mn-flag.gif",
+  Mexican: "https://www.worldometers.info/img/flags/small/tn_mx-flag.gif",
+  Malaysian: "https://www.worldometers.info/img/flags/small/tn_my-flag.gif",
+  "New Zealander":
+    "https://www.worldometers.info/img/flags/small/tn_nz-flag.gif",
+  Polish: "https://www.worldometers.info/img/flags/small/tn_pl-flag.gif",
+  Portuguese: "https://www.worldometers.info/img/flags/small/tn_po-flag.gif",
+  Rhodesian: "https://www.worldometers.info/img/flags/small/tn_za-flag.gif",
+  Russian: "https://www.worldometers.info/img/flags/small/tn_rs-flag.gif",
+  "South African":
+    "https://www.worldometers.info/img/flags/small/tn_sf-flag.gif",
+  Spanish: "https://www.worldometers.info/img/flags/small/tn_sp-flag.gif",
+  Swiss: "https://www.worldometers.info/img/flags/small/tn_sz-flag.gif",
+  Thai: "https://www.worldometers.info/img/flags/small/tn_th-flag.gif",
+  Venezuelan: "https://www.worldometers.info/img/flags/small/tn_ve-flag.gif",
+  Swedish: "https://www.worldometers.info/img/flags/small/tn_sw-flag.gif",
 };

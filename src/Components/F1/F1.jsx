@@ -6,12 +6,12 @@ import {
   standings2022,
   rounds2022,
   constructorLogo,
+  countryFlag,
 } from "./Resource/F1Resource";
 
 function F1() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [apidata, setApidata] = useState([]);
-  // const [apidata, setApidata] = useState(rounds2022);
   const [standings, setStandings] = useState([]);
   const [year, setYear] = useState(
     searchParams.get("year")
@@ -53,20 +53,28 @@ function F1() {
       <tr key={index} className="tableRow">
         <td>{item.positionText}</td>
         <td>
-          {item.Driver.givenName} {item.Driver.familyName}
-        </td>
-        <td className="constructorColumn">
-          {item.Constructors[0] && (
+          <div className="constructorColumn">
             <img
-              src={`${
-                item.Constructors[0].name in constructorLogo
-                  ? constructorLogo[item.Constructors[0].name]
-                  : "https://cdn-icons-png.flaticon.com/512/16/16096.png"
-              }`}
+              src={`${countryFlag[item.Driver.nationality]}`}
               className="constructorLogo"
             />
-          )}{" "}
-          {item.Constructors[0] ? item.Constructors[0].name : "Nil"}
+            {item.Driver.givenName} {item.Driver.familyName}
+          </div>
+        </td>
+        <td>
+          <div className="constructorColumn">
+            {item.Constructors[0] && (
+              <img
+                src={`${
+                  item.Constructors[0].name in constructorLogo
+                    ? constructorLogo[item.Constructors[0].name]
+                    : "https://cdn-icons-png.flaticon.com/512/16/16096.png"
+                }`}
+                className="constructorLogo"
+              />
+            )}{" "}
+            {item.Constructors[0] ? item.Constructors[0].name : ""}
+          </div>
         </td>
         <td>{item.points}</td>
         <td>{item.wins}</td>
