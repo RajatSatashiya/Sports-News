@@ -916,3 +916,360 @@ export const pointsTable = {
     webURL: "www.cricbuzz.com/cricket-series/4994/sa20-2023/points-table",
   },
 };
+
+export const matches = {
+  matchDetails: [
+    {
+      matchDetailsMap: {
+        key: "Thu, 09 Feb 2023 - Mon, 13 Feb 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60009,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "1st Test",
+              matchFormat: "TEST",
+              startDate: "1675915200000",
+              endDate: "1676286000000",
+              state: "Complete",
+              status: "India won by an innings and 132 runs",
+              team1: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              team2: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              venueInfo: {
+                id: 228,
+                ground: "Vidarbha Cricket Association Stadium",
+                city: "Nagpur",
+                timezone: "+05:30",
+              },
+              currBatTeamId: 2,
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+            matchScore: {
+              team1Score: {
+                inngs1: {
+                  inningsId: 1,
+                  runs: 177,
+                  wickets: 10,
+                  overs: 63.5,
+                },
+                inngs2: {
+                  inningsId: 3,
+                  runs: 91,
+                  wickets: 10,
+                  overs: 32.3,
+                },
+              },
+              team2Score: {
+                inngs1: {
+                  inningsId: 2,
+                  runs: 400,
+                  wickets: 10,
+                  overs: 139.3,
+                },
+              },
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+    {
+      adDetail: {
+        name: "native_news_index_random_1",
+        layout: "native_large",
+        position: 1,
+      },
+    },
+    {
+      matchDetailsMap: {
+        key: "Fri, 17 Feb 2023 - Tue, 21 Feb 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60016,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "2nd Test",
+              matchFormat: "TEST",
+              startDate: "1676606400000",
+              endDate: "1676977200000",
+              state: "Stumps",
+              status: "Day 1: Stumps - India trail by 242 runs",
+              team1: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              team2: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              venueInfo: {
+                id: 51,
+                ground: "Arun Jaitley Stadium",
+                city: "Delhi",
+                timezone: "+05:30",
+              },
+              currBatTeamId: 2,
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+            matchScore: {
+              team1Score: {
+                inngs1: {
+                  inningsId: 1,
+                  runs: 263,
+                  wickets: 10,
+                  overs: 78.4,
+                },
+              },
+              team2Score: {
+                inngs1: {
+                  inningsId: 2,
+                  runs: 21,
+                  overs: 8.6,
+                },
+              },
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+    {
+      matchDetailsMap: {
+        key: "Wed, 01 Mar 2023 - Sun, 05 Mar 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60023,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "3rd Test",
+              matchFormat: "TEST",
+              startDate: "1677643200000",
+              endDate: "1678014000000",
+              state: "Upcoming",
+              team1: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              team2: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              venueInfo: {
+                id: 152,
+                ground: "Holkar Cricket Stadium",
+                city: "Indore",
+                timezone: "+05:30",
+              },
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+    {
+      matchDetailsMap: {
+        key: "Thu, 09 Mar 2023 - Mon, 13 Mar 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60028,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "4th Test",
+              matchFormat: "TEST",
+              startDate: "1678334400000",
+              endDate: "1678705200000",
+              state: "Upcoming",
+              team1: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              team2: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              venueInfo: {
+                id: 50,
+                ground: "Narendra Modi Stadium",
+                city: "Ahmedabad",
+                timezone: "+05:30",
+              },
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+    {
+      adDetail: {
+        name: "native_news_index_random_2",
+        layout: "native_large",
+        position: 4,
+      },
+    },
+    {
+      matchDetailsMap: {
+        key: "Fri, 17 Mar 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60035,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "1st ODI",
+              matchFormat: "ODI",
+              startDate: "1679041800000",
+              endDate: "1679070600000",
+              state: "Upcoming",
+              team1: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              team2: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              venueInfo: {
+                id: 81,
+                ground: "Wankhede Stadium",
+                city: "Mumbai",
+                timezone: "+05:30",
+              },
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+    {
+      matchDetailsMap: {
+        key: "Sun, 19 Mar 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60037,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "2nd ODI",
+              matchFormat: "ODI",
+              startDate: "1679214600000",
+              endDate: "1679243400000",
+              state: "Upcoming",
+              team1: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              team2: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              venueInfo: {
+                id: 154,
+                ground: "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium",
+                city: "Visakhapatnam",
+                timezone: "+05:30",
+              },
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+    {
+      matchDetailsMap: {
+        key: "Wed, 22 Mar 2023",
+        match: [
+          {
+            matchInfo: {
+              matchId: 60042,
+              seriesId: 5204,
+              seriesName: "Australia tour of India, 2023",
+              matchDesc: "3rd ODI",
+              matchFormat: "ODI",
+              startDate: "1679473800000",
+              endDate: "1679502600000",
+              state: "Upcoming",
+              team1: {
+                teamId: 2,
+                teamName: "India",
+                teamSName: "IND",
+                imageId: 172115,
+              },
+              team2: {
+                teamId: 4,
+                teamName: "Australia",
+                teamSName: "AUS",
+                imageId: 172117,
+              },
+              venueInfo: {
+                id: 11,
+                ground: "MA Chidambaram Stadium",
+                city: "Chennai",
+                timezone: "+05:30",
+              },
+              seriesStartDt: "1675900800000",
+              seriesEndDt: "1679616000000",
+              isTimeAnnounced: true,
+            },
+          },
+        ],
+        seriesId: 5204,
+      },
+    },
+  ],
+  landingPosition: 2,
+  appIndex: {
+    seoTitle:
+      "Australia tour of India, 2023 live scores, schedule and results - Cricbuzz | Cricbuzz.com",
+    webURL: "www.cricbuzz.com/cricket-series/",
+  },
+};

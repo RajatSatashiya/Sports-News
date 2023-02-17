@@ -54,6 +54,7 @@
   background: #1d1d27;
   color: #fafafa;
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding: 1rem;
   font-family: Montserrat;
@@ -86,6 +87,30 @@
   font-size: 0.9rem;
 }
 
+.title {
+  font-family: Poppins;
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+
+.btn {
+  margin-left: 1rem;
+  padding: 0.8rem;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #1d1d27;
+}
+
+.btn:hover a {
+  color: #95a7d8;
+}
 .scorecard {
   background: #d7b6b8;
   color: #1d1d2e;
@@ -148,6 +173,17 @@
 
 .pointstable {
   margin-bottom: 1rem;
+}
+
+.seriesMatches {
+  margin-left: 1rem;
+  font-family: Montserrat;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seriesMatches .series {
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 415px) {

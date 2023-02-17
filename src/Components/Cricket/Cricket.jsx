@@ -20,7 +20,7 @@ function Cricket() {
         {
           headers: {
             "X-RapidAPI-Key":
-              "2a8016e8a9msha89647f2eb26617p1fd9d6jsn8c1a21455c46",
+              "b9711df563mshd084d4e7ca54a8dp14bf17jsna56d05d1aadd",
             "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
           },
         }
@@ -47,7 +47,9 @@ function Cricket() {
       const matchdata = item.seriesAdWrapper;
       return (
         <div key={index}>
-          <h3>{matchdata.seriesName}</h3>
+          <Link to={`/series/${matchdata.seriesId}`} style={{ color: "black" }}>
+            <h3>{matchdata.seriesName}</h3>
+          </Link>
           <div className="series">
             {matchdata.matches.map((match, index2) => {
               let matchDate = match.matchInfo.startDate;
@@ -76,7 +78,7 @@ function Cricket() {
                           <div className="score">
                             {team1.inngs1.runs}/
                             {team1.inngs1.wickets ? team1.inngs1.wickets : "0"}{" "}
-                            ({team1.inngs1.overs})
+                            ({team1.inngs1.overs ? team1.inngs1.overs : "0"})
                             {team1.inngs2 && (
                               <div className="secondinn">
                                 & {team1.inngs2.runs}/
@@ -120,6 +122,9 @@ function Cricket() {
               );
             })}
           </div>
+
+
+          
         </div>
       );
     }
@@ -133,25 +138,25 @@ function Cricket() {
             setMatchType("live");
           }}
         >
-          Live Matches
+          Live
         </div>
         <div
           onClick={() => {
             setMatchType("upcoming");
           }}
         >
-          Upcoming Matches
+          Upcoming
         </div>
         <div
           onClick={() => {
             setMatchType("recent");
           }}
         >
-          Recent Matches
+          Recent
         </div>
         <div>
           <Link to="/series" className="cricket-standings">
-            Standings
+            Calendar
           </Link>
         </div>
       </div>

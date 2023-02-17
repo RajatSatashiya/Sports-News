@@ -19,6 +19,11 @@ function Home() {
         sport="f1"
         image="https://i.pinimg.com/736x/e4/32/80/e43280f3d3dfc98c9d5fd322a49028a7.jpg"
       />
+
+      <Card
+        sport="Esports"
+        image="https://cdn.vox-cdn.com/thumbor/pOchrgSUAURepweJK1FAha87FN8=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19270015/ogFX9XLg.jpeg"
+      />
     </div>
   );
 }

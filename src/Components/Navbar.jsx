@@ -18,7 +18,7 @@ function Navbar() {
         <div className="nav-portion">
           <Link to="/">
             <img
-              src="./TheFinalWhistle.png"
+              src="/./Images/TheFinalWhistle.png"
               alt="the final whistle logo"
               className="nav-logo"
             />
