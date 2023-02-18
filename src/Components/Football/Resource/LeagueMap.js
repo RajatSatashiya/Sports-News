@@ -15,4 +15,5 @@ export const LeagueMap = {
   "Russian Premier League": "russianpremierleague",
   "Spanish Primera División": "laliga",
   "Turkish Super Lig": "süperlig",
+  saudiprofessionalleague: "saudiprofessionalleague",
 };

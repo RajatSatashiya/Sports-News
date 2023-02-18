@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "../Stylings/Standings.css";
+import { saudiTable } from "./Resource/LeagueMap";
 import Fixtures from "./Fixtures";
 
 function Standings({ id, season, leagues, league }) {
   const [standings, setStandings] = useState([]);
+  const [saudiStandings, setSaudiStandings] = useState([]);
   const [isNote, setIsNote] = useState(false);
 
   const getStandings = async (id_value, season_value) => {
@@ -17,6 +18,25 @@ function Standings({ id, season, leagues, league }) {
       if ("note" in data.data.standings[0]) {
         setIsNote(true);
       }
+    } catch (e) {
+      console.log("Error: " + e);
+    }
+  };
+
+  const getSaudiStandings = async () => {
+    try {
+      const response = await fetch(
+        "https://football98.p.rapidapi.com/saudiprofessionalleague/table",
+        {
+          headers: {
+            "X-RapidAPI-Key":
+              "2a8016e8a9msha89647f2eb26617p1fd9d6jsn8c1a21455c46",
+            "X-RapidAPI-Host": "football98.p.rapidapi.com",
+          },
+        }
+      );
+      const data = await response.json();
+      setSaudiStandings(data);
     } catch (e) {
       console.log("Error: " + e);
     }
@@ -53,6 +73,27 @@ function Standings({ id, season, leagues, league }) {
     );
   });
 
+  const displaySaudiStandings = saudiStandings.map((item, index) => {
+    return (
+      <tr key={index}>
+        <td
+        // style={{ borderLeft: "5px solid " + checkLeagueQualification(item) }}
+        >
+          {index + 1}
+        </td>
+        <td className="teamTitle">
+          <img src={item.SquadLogo} className="standingsLogo" />
+          <span>{item.Name}</span>
+        </td>
+        <td>{item.Played}</td>
+        <td>{item.Winned}</td>
+        <td>{item.Tie}</td>
+        <td>{item.Loosed}</td>
+        <td>{item.Points}</td>
+      </tr>
+    );
+  });
+
   const displayDropdown = leagues.map((item, index) => {
     const leagueYear = item.displayName.split(" ")[0];
     return (
@@ -63,21 +104,30 @@ function Standings({ id, season, leagues, league }) {
   });
 
   useEffect(() => {
-    getStandings(id, season);
+    if (id === "saudi") {
+      getSaudiStandings();
+    } else {
+      getStandings(id, season);
+    }
   }, []);
 
   return (
     <>
-      <h2 className="seasonTitle">Season</h2>
-
-      <select
-        onChange={(e) => {
-          getStandings(id, e.target.value);
-        }}
-        className="footballSelect"
-      >
-        {displayDropdown}
-      </select>
+      {id != "saudi" ? (
+        <>
+          <h2 className="seasonTitle">Season</h2>
+          <select
+            onChange={(e) => {
+              getStandings(id, e.target.value);
+            }}
+            className="footballSelect"
+          >
+            {displayDropdown}
+          </select>
+        </>
+      ) : (
+        ""
+      )}
 
       <div className="stanFixt">
         <div className="standingTable">
@@ -94,7 +144,9 @@ function Standings({ id, season, leagues, league }) {
               </tr>
             </thead>
 
-            <tbody>{displayStandings}</tbody>
+            <tbody>
+              {id === "saudi" ? displaySaudiStandings : displayStandings}
+            </tbody>
           </table>
 
           {isNote ? (

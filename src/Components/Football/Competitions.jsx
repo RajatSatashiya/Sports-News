@@ -41,7 +41,25 @@ function Competitions() {
   }, []);
   return (
     <>
-      <div className={styles.competitions}>{displayItems}</div>
+      <div className={styles.competitions}>
+        <div className={styles.panel}>
+          <img
+            src={
+              "https://assets.b365api.com/images/wp/o/2dbac37c1fbf72845c8eaa325f2efe98.webp"
+            }
+            alt="saudiprofessionalleague"
+            className={(styles.leagueLogo, styles.saudiLogo)}
+          />
+          <Link
+            to={`/league/saudi?name=saudiprofessionalleague`}
+            className={styles.links}
+          >
+            <div>Saudi Professional League</div>
+          </Link>
+        </div>
+
+        {displayItems}
+      </div>
     </>
   );
 }

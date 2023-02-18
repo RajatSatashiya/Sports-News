@@ -37,8 +37,18 @@ function FootballLeague() {
   };
 
   useEffect(() => {
-    getLeagueData();
-    getLeagueSeasons();
+    if (id != "saudi") {
+      getLeagueData();
+      getLeagueSeasons();
+    } else {
+      setLeague({
+        logos: {
+          light:
+            "https://assets.b365api.com/images/wp/o/2dbac37c1fbf72845c8eaa325f2efe98.webp",
+        },
+        name: "Saudi Pro League",
+      });
+    }
   }, []);
   return (
     <>

@@ -27,6 +27,11 @@
   width: 8rem;
 }
 
+.saudiLogo {
+  width: 8rem;
+  mix-blend-mode: color-burn;
+}
+
 .links {
   color: black;
 }
