@@ -114,7 +114,7 @@ function Schedule() {
 
   return (
     <>
-      <h3 className="title">{title}Australia tour of India</h3>
+      <h3 className="title">{title}</h3>
       <button className="btn">
         <Link to={`/pointstable/${id}`}>Standings</Link>
       </button>
