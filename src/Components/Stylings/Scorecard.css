@@ -1,3 +1,42 @@
 .matchstatus {
   margin: 1rem;
 }
+
+.matchDetails {
+  margin: 0.4rem;
+}
+
+.matchDetails h2 {
+  font-size: 1.7rem;
+  font-family: Poppins;
+}
+
+.matchDetailsTitle {
+  font-size: 1.2rem;
+  font-family: Hind;
+  width: 12rem;
+  /* background: pink; */
+}
+
+/* .playerDesc {
+  font-family: Inter;
+  font-size: 1.2rem;
+} */
+
+.matchDetails div {
+  display: flex;
+  align-items: center;
+}
+
+.matchDetailsTitle ~ div {
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.checking {
+  overflow-x: scroll;
+}
+
+.checking::-webkit-scrollbar {
+  display: none;
+}

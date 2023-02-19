@@ -5,6 +5,7 @@ import "../Stylings/Scorecard.css";
 function Template() {
   const [apidata, setApidata] = useState([]);
   const [matchStatus, setMatchStatus] = useState("");
+  const [matchInfo, setMatchInfo] = useState({});
   const { matchId } = useParams();
 
   useEffect(() => {
@@ -24,6 +25,8 @@ function Template() {
         }
       );
       const data = await response.json();
+      console.log(data);
+      setMatchInfo(data.matchHeader);
       setMatchStatus(data.status);
       setApidata(data.scoreCard);
     } catch (e) {
@@ -98,22 +101,24 @@ function Template() {
               {item.scoreDetails.runs} / {item.scoreDetails.wickets} (
               {item.scoreDetails.overs})
             </div>
-          </div>
-          <table className="scorecard">
             <div className="extra">Extras: {item.extrasData.total}</div>
-            <thead>
-              <tr className="batsmanRow">
-                <th className="player">Batsman</th>
-                <th></th>
-                <th>R</th>
-                <th>B</th>
-                <th>4s</th>
-                <th>6s</th>
-                <th>Sr</th>
-              </tr>
-            </thead>
-            <tbody>{BattingData(item.batTeamDetails)}</tbody>
-          </table>
+          </div>
+          <div className="checking">
+            <table className="scorecard">
+              <thead>
+                <tr className="batsmanRow">
+                  <th className="player">Batsman</th>
+                  <th></th>
+                  <th>R</th>
+                  <th>B</th>
+                  <th>4s</th>
+                  <th>6s</th>
+                  <th>Sr</th>
+                </tr>
+              </thead>
+              <tbody>{BattingData(item.batTeamDetails)}</tbody>
+            </table>
+          </div>
           <div className="bowling">
             <div className="innsTitle">
               <h2>{item.bowlTeamDetails.bowlTeamName}</h2>
@@ -145,6 +150,29 @@ function Template() {
       <div>
         <h3 className="matchstatus">{matchStatus}</h3>
         {displayResult}
+
+        <div className="matchDetails">
+          <h2>Match Details</h2>
+          <div>
+            <h4 className="matchDetailsTitle">Toss</h4>
+            <div className="">{matchInfo.status}</div>
+          </div>
+          <div>
+            <h4 className="matchDetailsTitle">Man of the Match</h4>
+            <div className="">
+              {matchInfo.playersOfTheMatch &&
+                matchInfo.playersOfTheMatch[0].fullName}
+            </div>
+          </div>
+          <div>
+            <h4 className="matchDetailsTitle">Man of the Series</h4>
+            <div className="">
+              {matchInfo.playersOfTheSeries &&
+                matchInfo.playersOfTheSeries[0] &&
+                matchInfo.playersOfTheSeries[0].fullName}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

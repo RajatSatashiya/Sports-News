@@ -83,6 +83,7 @@
   color: #95a7d8;
   font-family: Poppins;
   padding: 0.8rem;
+  position: relative;
   /* margin: 4rem 0 0 0; */
   font-size: 0.9rem;
 }
@@ -117,7 +118,6 @@
   padding: 1rem;
   width: 100%;
   margin: 0rem 0;
-  position: relative;
 }
 
 .player {
@@ -126,7 +126,7 @@
 
 .extra {
   position: absolute;
-  top: -30px;
+  top: 15px;
   color: #95a7d8;
   right: 20px;
 }
@@ -191,11 +191,14 @@
     padding: 0.5rem;
   }
   .playerDesc {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
   .batsmanRow td,
   .batsmanRow th {
     padding-bottom: 0.7rem;
     padding-right: 0.6rem;
+  }
+  .checking {
+    overflow: hidden;
   }
 }
