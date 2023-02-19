@@ -75,7 +75,7 @@ function Race() {
       )}
 
       {results.length != 0 && (
-        <table>
+        <table className="raceTable">
           <thead>
             <tr>
               <th>Pos</th>
