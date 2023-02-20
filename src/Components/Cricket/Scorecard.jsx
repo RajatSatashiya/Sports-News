@@ -19,7 +19,7 @@ function Template() {
         {
           headers: {
             "X-RapidAPI-Key":
-              "b9711df563mshd084d4e7ca54a8dp14bf17jsna56d05d1aadd",
+              "2a8016e8a9msha89647f2eb26617p1fd9d6jsn8c1a21455c46",
             "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
           },
         }
