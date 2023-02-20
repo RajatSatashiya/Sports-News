@@ -63,7 +63,7 @@ function PointsTable() {
   });
 
   useEffect(() => {
-    // getApiData();
+    getApiData();
   }, []);
 
   return <>{!error && displayResult}</>;
