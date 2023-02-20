@@ -49,7 +49,7 @@ function F1() {
   const getConstructorStandings = async (val) => {
     try {
       const response = await fetch(
-        `http://ergast.com/api/f1/${val}/constructorStandings.json`
+        `https://ergast.com/api/f1/${val}/constructorStandings.json`
       );
       const data = await response.json();
       setconstructorStandings(
