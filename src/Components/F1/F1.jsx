@@ -2,17 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import "../Stylings/F1.css";
-import {
-  standings2022,
-  rounds2022,
-  constructorLogo,
-  countryFlag,
-} from "./Resource/F1Resource";
+import ConstructorStandings from "./ConstructorStandings";
+import DriverStandings from "./DriverStandings";
 
 function F1() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [apidata, setApidata] = useState([]);
-  const [standings, setStandings] = useState([]);
+  const [driverStandings, setDriverStandings] = useState([]);
+  const [constructorStandings, setconstructorStandings] = useState([]);
+  const [rankCategory, setRankCategory] = useState("driver");
   const [year, setYear] = useState(
     searchParams.get("year")
       ? searchParams.get("year")
@@ -24,7 +22,7 @@ function F1() {
     seasons.push(i);
   }
 
-  const getApiData = async (val) => {
+  const getSchedule = async (val) => {
     try {
       const response = await fetch(`https://ergast.com/api/f1/${val}.json`);
       const data = await response.json();
@@ -34,13 +32,13 @@ function F1() {
     }
   };
 
-  const getStandings = async (val) => {
+  const getDriverStandings = async (val) => {
     try {
       const response = await fetch(
         `https://ergast.com/api/f1/${val}/driverStandings.json`
       );
       const data = await response.json();
-      setStandings(
+      setDriverStandings(
         data.MRData.StandingsTable.StandingsLists[0].DriverStandings
       );
     } catch (e) {
@@ -48,41 +46,21 @@ function F1() {
     }
   };
 
-  const displayDriversStandings = standings.map((item, index) => {
-    return (
-      <tr key={index} className="tableRow">
-        <td>{item.positionText}</td>
-        <td>
-          <div className="constructorColumn">
-            <img
-              src={`${countryFlag[item.Driver.nationality]}`}
-              className="constructorLogo"
-            />
-            {item.Driver.givenName} {item.Driver.familyName}
-          </div>
-        </td>
-        <td>
-          <div className="constructorColumn">
-            {item.Constructors[0] && (
-              <img
-                src={`${
-                  item.Constructors[0].name in constructorLogo
-                    ? constructorLogo[item.Constructors[0].name]
-                    : "https://cdn-icons-png.flaticon.com/512/16/16096.png"
-                }`}
-                className="constructorLogo"
-              />
-            )}{" "}
-            {item.Constructors[0] ? item.Constructors[0].name : ""}
-          </div>
-        </td>
-        <td>{item.points}</td>
-        <td>{item.wins}</td>
-      </tr>
-    );
-  });
+  const getConstructorStandings = async (val) => {
+    try {
+      const response = await fetch(
+        `http://ergast.com/api/f1/${val}/constructorStandings.json`
+      );
+      const data = await response.json();
+      setconstructorStandings(
+        data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings
+      );
+    } catch (e) {
+      console.log("Error: " + e);
+    }
+  };
 
-  const displayResult = apidata.map((item, index) => {
+  const displaySchedule = apidata.map((item, index) => {
     return (
       <div className="prix" key={index}>
         <Link to={`/f1/${year}/${item.round}`}>
@@ -101,12 +79,18 @@ function F1() {
   });
 
   useEffect(() => {
-    getApiData(
+    getSchedule(
       searchParams.get("year")
         ? searchParams.get("year")
         : new Date().getFullYear()
     );
-    getStandings(
+    getDriverStandings(
+      searchParams.get("year")
+        ? searchParams.get("year")
+        : new Date().getFullYear()
+    );
+
+    getConstructorStandings(
       searchParams.get("year")
         ? searchParams.get("year")
         : new Date().getFullYear()
@@ -120,8 +104,9 @@ function F1() {
         <select
           onChange={(e) => {
             const theseason = e.target.value;
-            getApiData(theseason);
-            getStandings(theseason);
+            getSchedule(theseason);
+            getDriverStandings(theseason);
+            getConstructorStandings(theseason);
             setYear(theseason);
             setSearchParams({ year: theseason });
           }}
@@ -131,21 +116,23 @@ function F1() {
         </select>
 
         <div className="f1Standings-container">
-          <div className="grandPrix">{displayResult}</div>
+          <div className="grandPrix">{displaySchedule}</div>
 
           <div className="f1Table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Pos</th>
-                  <th>Driver</th>
-                  <th>Constructor</th>
-                  <th>Pts.</th>
-                  <th>Wins</th>
-                </tr>
-              </thead>
-              <tbody className="f1-tbody">{displayDriversStandings}</tbody>
-            </table>
+            <div className="standingsButton">
+              <button onClick={() => setRankCategory("driver")}>
+                Driver Standings
+              </button>
+              <button onClick={() => setRankCategory("constructor")}>
+                Constructors Standings
+              </button>
+            </div>
+
+            {rankCategory === "driver" ? (
+              <DriverStandings standings={driverStandings} />
+            ) : (
+              <ConstructorStandings standings={constructorStandings} />
+            )}
           </div>
         </div>
       </div>

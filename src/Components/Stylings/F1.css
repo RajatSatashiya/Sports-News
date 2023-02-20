@@ -13,6 +13,29 @@
   margin: 1rem 0 0.4rem 0;
 }
 
+.standingsButton {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.standingsButton button {
+  padding: 0.8rem;
+  border-radius: 20px;
+  border: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #e4d6a5;
+  font-family: Poppins;
+}
+.standingsButton button:hover {
+  background: #ebb353;
+}
+
+.constructorsTable {
+  width: 200px;
+}
+
 .f1select {
   border: none;
   font-family: Montserrat;

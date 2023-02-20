@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function PointsTable() {
+  const [error, setError] = useState(false);
   const { id } = useParams();
   const [apidata, setApidata] = useState([]);
 
@@ -18,7 +19,7 @@ function PointsTable() {
         }
       );
       const data = await response.json();
-      console.log(data);
+      console.log(response);
       setApidata(data.pointsTable);
     } catch (e) {
       console.log("Error: " + e.message);
@@ -62,10 +63,10 @@ function PointsTable() {
   });
 
   useEffect(() => {
-    getApiData();
+    // getApiData();
   }, []);
 
-  return <>{displayResult}</>;
+  return <>{!error && displayResult}</>;
 }
 
 export default PointsTable;

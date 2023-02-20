@@ -22,7 +22,6 @@ function Schedule() {
       const data = await response.json();
       setApidata(data.matchDetails);
       setTitle(data.appIndex.seoTitle.split("live")[0]);
-      console.log(data);
     } catch (e) {
       console.log("Error: " + e.message);
     }
