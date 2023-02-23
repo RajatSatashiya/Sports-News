@@ -5,7 +5,7 @@ function Card({ sport, image }) {
   return (
     <div className="card">
       <Link to={sport}>
-        <img src={image} alt="sports illustration" width="300px" />
+        <img src={image} alt="sports illustration" className="sportsImage" />
         <div className="sport">{sport}</div>
       </Link>
     </div>

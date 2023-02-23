@@ -3,6 +3,14 @@
   font-family: Montserrat;
 }
 
+.errorMsg {
+  color: red;
+  font-family: Hind;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1rem;
+}
+
 .matchType {
   display: flex;
   align-items: flex-start;
@@ -84,6 +92,7 @@
   font-family: Poppins;
   padding: 0.8rem;
   position: relative;
+  max-width: 60rem;
   /* margin: 4rem 0 0 0; */
   font-size: 0.9rem;
 }
@@ -117,6 +126,7 @@
   color: #1d1d2e;
   padding: 1rem;
   width: 100%;
+  max-width: 60rem;
   margin: 0rem 0;
 }
 
@@ -173,6 +183,30 @@
 
 .pointstable {
   margin-bottom: 1rem;
+  background: transparent;
+}
+
+.pointstable td,
+.pointstable th {
+  padding: 8px;
+}
+
+/* Add a background color to the table header cells */
+.pointstable th {
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Add hover styles to the table rows */
+.pointstable tr:hover {
+  background-color: #ddd;
+}
+
+/* Add zebra striping to the table rows */
+.pointstable tr:nth-child(even) {
+  background-color: #f2f2f2;
+  background: rgba(128, 128, 128, 0.719);
 }
 
 .seriesMatches {

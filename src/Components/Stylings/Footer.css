@@ -4,6 +4,9 @@ footer {
   padding: 2rem;
   color: #fafafa;
   font-family: Montserrat;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 .footer-desc {
   margin: 4rem;

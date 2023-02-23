@@ -5,6 +5,7 @@ function PointsTable() {
   const [error, setError] = useState(false);
   const { id } = useParams();
   const [apidata, setApidata] = useState([]);
+  const [title, setTitle] = useState("");
 
   const getApiData = async () => {
     try {
@@ -19,10 +20,11 @@ function PointsTable() {
         }
       );
       const data = await response.json();
-      console.log(response);
       setApidata(data.pointsTable);
+      setTitle(data.appIndex.seoTitle.split("Points")[0]);
     } catch (e) {
-      console.log("Error: " + e.message);
+      setError(true);
+      setTitle("Points table for the given tournament doesn't exist!!!");
     }
   };
 
@@ -66,7 +68,18 @@ function PointsTable() {
     getApiData();
   }, []);
 
-  return <>{!error && displayResult}</>;
+  return (
+    <>
+      {!error ? (
+        <>
+          <h3 className="title">{title}</h3>
+          {displayResult}
+        </>
+      ) : (
+        <div className="errorMsg">{title}</div>
+      )}
+    </>
+  );
 }
 
 export default PointsTable;

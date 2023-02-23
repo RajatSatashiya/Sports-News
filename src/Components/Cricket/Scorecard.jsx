@@ -93,7 +93,7 @@ function Template() {
     return (
       <div key={index}>
         <h2 className="innings">Innings: {item.inningsId}</h2>
-        <div>
+        <div className="scorecardContainer">
           <div className="innsTitle">
             <h2>{item.batTeamDetails.batTeamName}</h2>
             <div>
@@ -153,7 +153,7 @@ function Template() {
         <div className="matchDetails">
           <h2>Match Details</h2>
           <div>
-            <h4 className="matchDetailsTitle">Toss</h4>
+            <h4 className="matchDetailsTitle">Toss/Status</h4>
             <div className="">{matchInfo.status}</div>
           </div>
           <div>
