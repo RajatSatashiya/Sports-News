@@ -25,7 +25,6 @@ function Template() {
         }
       );
       const data = await response.json();
-      console.log(data);
       setMatchInfo(data.matchHeader);
       setMatchStatus(data.status);
       setApidata(data.scoreCard);
@@ -161,6 +160,7 @@ function Template() {
             <h4 className="matchDetailsTitle">Man of the Match</h4>
             <div className="">
               {matchInfo.playersOfTheMatch &&
+                matchInfo.playersOfTheMatch[0] &&
                 matchInfo.playersOfTheMatch[0].fullName}
             </div>
           </div>
