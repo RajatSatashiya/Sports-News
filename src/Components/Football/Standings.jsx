@@ -36,6 +36,7 @@ function Standings({ id, season, leagues, league }) {
         }
       );
       const data = await response.json();
+      console.log("data", data);
       setSaudiStandings(data);
     } catch (e) {
       console.log("Error: " + e);
@@ -65,10 +66,10 @@ function Standings({ id, season, leagues, league }) {
           <span>{item.team.name}</span>
         </td>
         <td>{item.stats[0].value}</td>
+        <td>{item.stats[7].value}</td>
         <td>{item.stats[6].value}</td>
-        <td>{item.stats[5].value}</td>
         <td>{item.stats[1].value}</td>
-        <td>{item.stats[2].value}</td>
+        <td>{item.stats[3].value}</td>
       </tr>
     );
   });
