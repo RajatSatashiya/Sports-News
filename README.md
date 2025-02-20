@@ -30,7 +30,7 @@ Welcome to **Sports News**, a responsive ReactJS website designed to provide liv
 - **Responsive Design**: The website is fully responsive and works seamlessly on desktop, tablet, and mobile devices.
 - **Esports Tab**: A placeholder tab for Esports data, to be implemented in the future.
 - **Public APIs**: Utilizes public APIs to fetch sports data.
-- **Deployed on Netlify**: The site is live and accessible at [https://www.nsalkdn.com/](https://www.nsalkdn.com/).
+- **Deployed on Netlify**: The site is live and accessible at [https://newsfutbol.netlify.app/](https://newsfutbol.netlify.app/).
 
 ---
 
@@ -47,9 +47,9 @@ Welcome to **Sports News**, a responsive ReactJS website designed to provide liv
 
 The following public APIs are used to fetch sports data:
 
-- **Cricket**: [Cricbuzz API](https://www.cricbuzz.com/) - Provides live scores, match details, and player statistics for cricket.
-- **Football**: [API-Football-Standings](https://www.api-football.com/) - Offers league standings, match results, and team statistics for football.
-- **F1**: [Ergast API](http://ergast.com/mrd/) - Delivers race results, driver standings, and circuit information for Formula 1.
+- **Cricket**: Cricbuzz API - Provides live scores, match details, and player statistics for cricket.
+- **Football**: API-Football-Standings - Offers league standings, match results, and team statistics for football.
+- **F1**: Ergast API - Delivers race results, driver standings, and circuit information for Formula 1.
 
 ---
 
